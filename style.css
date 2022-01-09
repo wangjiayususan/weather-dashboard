@@ -1,0 +1,44 @@
+header {
+    background-color: #5A6C73;
+    height: 100px!important;
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: #f8f8ff;
+    text-align:center;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+#current-forecast,
+#five-day-forecast,
+li {
+    color: #4D4F53!important;
+}
+
+.search-column {
+    background-color: #97A6A4!important;
+    height: 100vh;
+}
+
+five-day-weather-list.card {
+    border: 1px solid white!important;
+}
+
+p {
+    color: #3e214e;
+}
+
+h2, h4 {
+    color: #0b0b11;
+}
+
+body {
+    background-color: #b2bde2;
+    flex:auto;
+}
