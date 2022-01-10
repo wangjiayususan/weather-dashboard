@@ -7,24 +7,6 @@ var currentInfoEl=document.querySelector("#current-weather-info");
 var forecastTitle=document.querySelector("#forecast");
 var forecastInfoEl=document.querySelector("#five-day-weather-info");
 
-// add on click event listener 
-$("#searchBtn").on("click", function(event) {
-    event.preventDefault();
-    var city=cityInputEl.value.trim();
-    if(city){
-        getCurrentWeather(city);
-        getForecastWeather(city);
-        cities.unshift({city});
-        cityInputEl.value="";
-    saveSearch();
-    pastSearch(city);
-}
-
-var saveSearch=function(){
-    localStorage.setItem("cities",JSON.stringify(cities));
-    console.log(cities)
-};
-
 var getCurrentWeather=function(city){
     var apiKey="50800056cb7625c31cfc2a3e0e53dafc";
     var apiURL=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
@@ -153,5 +135,29 @@ var shownForecastWeather = function(weather){
     forecastEl.appendChild(forecastwindSpeedEl);
 
     forecastInfoEl.appendChild(forecastEl);
-    };
+    };  
+}
+
+// add on click event listener 
+$("#searchBtn").on("click", function(event) {
+    event.preventDefault();
+    var city=cityInputEl.value.trim();
+    if(city){
+        getCurrentWeather(city);
+        getForecastWeather(city);
+        cities.unshift({city});
+        cityInputEl.value="";
+    saveSearch();
+    pastSearch(city);
+}
+
+var saveSearch=function(){
+    localStorage.setItem("cities",JSON.stringify(cities));
+    console.log(cities)
+};
+    
+//click saved cities
+$(document).on("click", "city", function() {
+    var listCity = $(this).text();
+    currentCondition(listCity);
 }
