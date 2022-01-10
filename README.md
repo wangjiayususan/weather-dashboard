@@ -10,7 +10,7 @@ Your challenge is to build a weather dashboard that will run in the browser and 
 
 ## Summary
 - Use the OpenWeather One Call API (Links to an external site) to retrieve weather data for cities. Read through the documentation for setup and usage instructions. You will use localStorage to store any persistent data.
-- ![image](https://user-images.githubusercontent.com/93291904/148723663-f9ee5fb8-3332-4cbd-8eb6-b9db0a4a55fe.png)
+![image](https://user-images.githubusercontent.com/93291904/148723663-f9ee5fb8-3332-4cbd-8eb6-b9db0a4a55fe.png)
 
 ## Project Requirement
 GIVEN a weather dashboard with form inputs
