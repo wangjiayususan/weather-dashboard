@@ -149,15 +149,16 @@ $("#searchBtn").on("click", function(event) {
         cityInputEl.value="";
     saveSearch();
     pastSearch(city);
-}
+};
 
 var saveSearch=function(){
     localStorage.setItem("cities",JSON.stringify(cities));
     console.log(cities)
 };
-    
+})
+
 //click saved cities
 $(document).on("click", "city", function() {
     var listCity = $(this).text();
     currentCondition(listCity);
-}
+})
